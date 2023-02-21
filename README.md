@@ -62,7 +62,6 @@ Write description of the game.
 - Main Game Creation Developers
   - [Htet Myat Moe Myin Kyeal](https://github.com/AngelicaMoeMyintKyeal)
   - [Pierpaolo Siciliano](https://github.com/PierSic-dev)
-  - [Giovanni Mandato(Standby Developer)]()
   
 - Main Game Characters Design Artists
   - [Salvatore Amato]()
