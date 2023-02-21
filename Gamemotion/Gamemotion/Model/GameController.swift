@@ -78,18 +78,22 @@ class GameController: NSObject, ObservableObject {
         buttonB = gamepad.buttonB
         rightTrigger = gamepad.rightTrigger
         
-        buttonA?.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+        buttonA?.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
             guard let strongController = weakController else {
                 return
             }
-            strongController.controllerJump(pressed)
+            if pressed {
+                strongController.controllerJump(pressed)
+            }
         }
         
         buttonB?.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
             guard let strongController = weakController else {
                 return
             }
-            strongController.controllerAttack()
+            if pressed {
+                strongController.controllerAttack()
+            }
         }
         
         rightTrigger?.pressedChangedHandler = buttonB?.valueChangedHandler
@@ -97,6 +101,7 @@ class GameController: NSObject, ObservableObject {
     
     func controllerJump(_ controllerJump: Bool) {
         isJumping = controllerJump
+        print("X button pressed")
     }
     
     func controllerAttack() {
@@ -105,6 +110,7 @@ class GameController: NSObject, ObservableObject {
 //            self.character!.attack()
 //        }
         isAttacking = true
+        print("O button pressed")
     }
     
     /// hints
