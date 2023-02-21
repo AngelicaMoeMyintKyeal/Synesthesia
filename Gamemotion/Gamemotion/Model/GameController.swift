@@ -13,8 +13,6 @@ class GameController: NSObject, ObservableObject {
     private var isJumping = false
     private var isAttacking = false
     
-    private var gamePadLeft: GCControllerDirectionPad?
-    private var gamePadRight: GCControllerDirectionPad?
     private var gamePadCurrent: GCController?
     
     init(SKScene: SKScene) {
@@ -51,19 +49,13 @@ class GameController: NSObject, ObservableObject {
     @objc
     func handleControllerDidDisconnect(_ notification: Notification) {
         print("controller disconnected")
-        unregisterGameController()
-    }
-    
-    func unregisterGameController() {
-        gamePadLeft = nil
-        gamePadRight = nil
-        gamePadCurrent = nil
     }
     
     func registerGameController(_ gameController: GCController) {
+        var analogLeft: GCControllerDirectionPad?
         var buttonA: GCControllerButtonInput?
         var buttonB: GCControllerButtonInput?
-        var rightTrigger: GCControllerButtonInput?
+        var buttonX: GCControllerButtonInput?
         
         weak var weakController = self
         
@@ -72,31 +64,39 @@ class GameController: NSObject, ObservableObject {
             return
         }
         
-        self.gamePadLeft = gamepad.leftThumbstick
-        self.gamePadRight = gamepad.rightThumbstick
-        buttonA = gamepad.buttonA
-        buttonB = gamepad.buttonB
-        rightTrigger = gamepad.rightTrigger
+        analogLeft = gamepad.leftThumbstick
+        buttonA = gamepad.buttonA // Cross on Playstation
+        buttonB = gamepad.buttonB // Circle on Playstation
+        buttonX = gamepad.buttonX // Square on Playstation
         
         buttonA?.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
             guard let strongController = weakController else {
                 return
             }
             if pressed {
+                print("jump")
                 strongController.controllerJump(pressed)
             }
         }
         
-        buttonB?.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+        buttonB?.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
             guard let strongController = weakController else {
                 return
             }
             if pressed {
+                print("attack")
                 strongController.controllerAttack()
             }
         }
         
-        rightTrigger?.pressedChangedHandler = buttonB?.valueChangedHandler
+        buttonX?.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+            guard let strongController = weakController else {
+                return
+            }
+            if pressed {
+                print("dash")
+            }
+        }
     }
     
     func controllerJump(_ controllerJump: Bool) {
