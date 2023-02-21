@@ -16,6 +16,7 @@
 		AC9747C3299CE49B005D525E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9747C2299CE49B005D525E /* ContentView.swift */; };
 		AC9747C5299CE49C005D525E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9747C4299CE49C005D525E /* Assets.xcassets */; };
 		AC9747C8299CE49C005D525E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9747C7299CE49C005D525E /* Preview Assets.xcassets */; };
+		ACE4E45429A4E5B1000208D2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4E45329A4E5B1000208D2 /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AC9747C4299CE49C005D525E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC9747C7299CE49C005D525E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC9747C9299CE49C005D525E /* Gamemotion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gamemotion.entitlements; sourceTree = "<group>"; };
+		ACE4E45329A4E5B1000208D2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				AC9747C0299CE49B005D525E /* GamemotionApp.swift */,
 				AC9747C2299CE49B005D525E /* ContentView.swift */,
+				ACE4E45229A4E596000208D2 /* Scene */,
 				88633C1429A4B7610095FFED /* Model */,
 				88633C1929A4BF0A0095FFED /* SpriteKit */,
 				AC9747C4299CE49C005D525E /* Assets.xcassets */,
@@ -98,6 +101,14 @@
 				AC9747C7299CE49C005D525E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACE4E45229A4E596000208D2 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				ACE4E45329A4E5B1000208D2 /* GameScene.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 			files = (
 				AC9747C3299CE49B005D525E /* ContentView.swift in Sources */,
 				88633C1329A4B75B0095FFED /* GameController.swift in Sources */,
+				ACE4E45429A4E5B1000208D2 /* GameScene.swift in Sources */,
 				AC9747C1299CE49B005D525E /* GamemotionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
