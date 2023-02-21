@@ -18,7 +18,6 @@ class GameController: NSObject, ObservableObject {
     init(SKScene: SKScene) {
         super.init()
         
-        // Set up game controller.
         setupGameController()
     }
     
@@ -38,7 +37,6 @@ class GameController: NSObject, ObservableObject {
             return
         }
         print("controller connected")
-//        unregisterGameController()
         
         registerGameController(gameController)
         
@@ -57,6 +55,8 @@ class GameController: NSObject, ObservableObject {
         var buttonA: GCControllerButtonInput?
         var buttonB: GCControllerButtonInput?
         var buttonX: GCControllerButtonInput?
+        var isHoldingRight = false
+        var isHoldingLeft = false
         
         weak var weakController = self
         
@@ -92,18 +92,33 @@ class GameController: NSObject, ObservableObject {
         }
         
         buttonX?.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
-            guard let strongController = weakController else {
-                return
-            }
+//            guard let strongController = weakController else {
+//                return
+//            }
             if pressed {
                 print("dash")
             }
+        }
+        
+        dPad?.up.pressedChangedHandler = buttonA?.pressedChangedHandler
+        
+        dPad?.right.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+//            guard let strongController = weakController else {
+//                return
+//            }
+            isHoldingRight = pressed
+        }
+        
+        dPad?.left.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+//            guard let strongController = weakController else {
+//                return
+//            }
+            isHoldingLeft = pressed
         }
     }
     
     func controllerJump(_ controllerJump: Bool) {
         isJumping = controllerJump
-        print("X button pressed")
     }
     
     func controllerAttack() {
@@ -112,8 +127,8 @@ class GameController: NSObject, ObservableObject {
 //            self.character!.attack()
 //        }
         isAttacking = true
-        print("O button pressed")
     }
+    
     
     /// hints
 //    func showHints() {
