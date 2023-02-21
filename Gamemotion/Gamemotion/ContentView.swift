@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
+import SpriteKit
 
 struct ContentView: View {
+    @StateObject var gameController = GameController(SKScene: SKScene(fileNamed: "Level0")!)
+    var scene = SKScene(fileNamed: "Level0")!
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        SpriteView(scene: self.scene)
+            .frame(width: 1200, height: 600)
     }
 }
 
