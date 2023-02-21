@@ -52,7 +52,8 @@ class GameController: NSObject, ObservableObject {
     }
     
     func registerGameController(_ gameController: GCController) {
-        var analogLeft: GCControllerDirectionPad?
+        var dPad: GCControllerDirectionPad?
+        var leftAnalog: GCControllerDirectionPad?
         var buttonA: GCControllerButtonInput?
         var buttonB: GCControllerButtonInput?
         var buttonX: GCControllerButtonInput?
@@ -64,7 +65,8 @@ class GameController: NSObject, ObservableObject {
             return
         }
         
-        analogLeft = gamepad.leftThumbstick
+        dPad = gamepad.dpad
+        leftAnalog = gamepad.leftThumbstick
         buttonA = gamepad.buttonA // Cross on Playstation
         buttonB = gamepad.buttonB // Circle on Playstation
         buttonX = gamepad.buttonX // Square on Playstation
