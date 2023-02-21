@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88633C1329A4B75B0095FFED /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C1229A4B75B0095FFED /* GameController.swift */; };
-		88633C1629A4BDC70095FFED /* Level0.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1529A4BDC70095FFED /* Level0.sks */; };
+		88633C1629A4BDC70095FFED /* Level0Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1529A4BDC70095FFED /* Level0Scene.sks */; };
 		88633C1829A4BF020095FFED /* GroundPhysics.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1729A4BF020095FFED /* GroundPhysics.sks */; };
 		88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */; };
 		88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1B29A4BF4F0095FFED /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		88633C1229A4B75B0095FFED /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		88633C1529A4BDC70095FFED /* Level0.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level0.sks; sourceTree = "<group>"; };
+		88633C1529A4BDC70095FFED /* Level0Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level0Scene.sks; sourceTree = "<group>"; };
 		88633C1729A4BF020095FFED /* GroundPhysics.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GroundPhysics.sks; sourceTree = "<group>"; };
 		88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExampleTiles.sks; sourceTree = "<group>"; };
 		88633C1B29A4BF4F0095FFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		88633C1929A4BF0A0095FFED /* SpriteKit */ = {
 			isa = PBXGroup;
 			children = (
-				88633C1529A4BDC70095FFED /* Level0.sks */,
+				88633C1529A4BDC70095FFED /* Level0Scene.sks */,
 				88633C1729A4BF020095FFED /* GroundPhysics.sks */,
 				88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */,
 				88633C1B29A4BF4F0095FFED /* Assets.xcassets */,
@@ -158,7 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88633C1629A4BDC70095FFED /* Level0.sks in Resources */,
+				88633C1629A4BDC70095FFED /* Level0Scene.sks in Resources */,
 				88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */,
 				AC9747C8299CE49C005D525E /* Preview Assets.xcassets in Resources */,
 				88633C1829A4BF020095FFED /* GroundPhysics.sks in Resources */,
@@ -306,7 +306,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gamemotion/Preview Content\"";
-				DEVELOPMENT_TEAM = AVG85342HW;
+				DEVELOPMENT_TEAM = 4Y299ULQLV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -333,7 +333,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gamemotion/Preview Content\"";
-				DEVELOPMENT_TEAM = AVG85342HW;
+				DEVELOPMENT_TEAM = 4Y299ULQLV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
