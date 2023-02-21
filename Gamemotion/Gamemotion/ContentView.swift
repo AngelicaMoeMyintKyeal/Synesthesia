@@ -10,7 +10,7 @@ import SpriteKit
 
 struct ContentView: View {
     @StateObject var gameController = GameController(SKScene: SKScene(fileNamed: "Level0Scene")!)
-    var scene = SKScene(fileNamed: "Level0")!
+    var scene = SKScene(fileNamed: "Level0Scene")!
     
     var body: some View {
         SpriteView(scene: self.scene)
