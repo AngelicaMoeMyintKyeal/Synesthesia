@@ -9,6 +9,7 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
+    @StateObject var gameController = GameController(SKScene: SKScene(fileNamed: "Level0")!)
     var scene = SKScene(fileNamed: "Level0")!
     
     var body: some View {

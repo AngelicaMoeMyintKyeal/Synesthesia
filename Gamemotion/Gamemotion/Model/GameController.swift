@@ -8,7 +8,7 @@
 import SpriteKit
 import GameController
 
-class GameController: NSObject {
+class GameController: NSObject, ObservableObject {
     
     private var isJumping = false
     private var isAttacking = false
@@ -30,10 +30,8 @@ class GameController: NSObject {
             name: NSNotification.Name.GCControllerDidBecomeCurrent, object: nil)
         
         NotificationCenter.default.addObserver(
-            self, selector: #selector(self.unregisterGameController),
+            self, selector: #selector(self.handleControllerDidDisconnect),
             name: NSNotification.Name.GCControllerDidStopBeingCurrent, object: nil)
-        
-        let controller = GCController.controllers().first
     }
     
     @objc
@@ -41,8 +39,8 @@ class GameController: NSObject {
         guard let gameController = notification.object as? GCController else {
             return
         }
-        
-        unregisterGameController()
+        print("controller connected")
+//        unregisterGameController()
         
         registerGameController(gameController)
         
@@ -51,6 +49,11 @@ class GameController: NSObject {
     }
     
     @objc
+    func handleControllerDidDisconnect(_ notification: Notification) {
+        print("controller disconnected")
+        unregisterGameController()
+    }
+    
     func unregisterGameController() {
         gamePadLeft = nil
         gamePadRight = nil
