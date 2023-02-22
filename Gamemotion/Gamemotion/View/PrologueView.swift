@@ -8,12 +8,30 @@
 import SwiftUI
 
 struct PrologueView: View {
+    
     var body: some View {
+    
         VStack {
-            Text("Gamemotion")
+            Spacer()
+            HStack {
+                Spacer()
+                Button(
+                    action: {
+                        // write action
+                        print("Skip Button is Clicked")
+                    },
+                    label: {
+                        Image("SkipButton")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                )
+                .padding()
+                .frame(width: 80, height: 80)
+            }
         }
         .background(
-            Image("Prologue")
+            Image("FearLBackground")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
         )
