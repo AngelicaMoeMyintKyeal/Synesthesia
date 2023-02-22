@@ -11,7 +11,7 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var hero = SKSpriteNode()
-    var heroTexture = SKTexture(imageNamed: "Character")
+    var heroTexture = SKTexture(imageNamed: "Hero")
     
     enum bitMasks: UInt32 {
         case hero = 0b1
