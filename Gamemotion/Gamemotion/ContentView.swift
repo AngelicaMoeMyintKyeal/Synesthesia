@@ -9,12 +9,19 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
-    @StateObject var gameController = GameController(SKScene: SKScene(fileNamed: "Level0Scene")!)
-    var scene = SKScene(fileNamed: "Level0Scene")!
+    @StateObject var gameController = GameController(SKScene: SKScene(fileNamed: "RageScene")!)
+    var rageScene = SKScene(fileNamed: "RageScene")!
+    
+    var scene: SKScene {
+        let scene = self.rageScene
+            scene.size = CGSize(width: 1200, height: 600)
+            scene.scaleMode = .fill
+            return scene
+        }
     
     var body: some View {
         SpriteView(scene: self.scene)
-            .frame(width: 1200, height: 600)
+            .ignoresSafeArea()
     }
 }
 

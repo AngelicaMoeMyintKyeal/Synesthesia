@@ -11,22 +11,39 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var hero = SKSpriteNode()
-    var heroTexture = SKTexture(imageNamed: "Character")
+    var heroTexture = SKTexture(imageNamed: "Hero")
+    
+    var rageTileL = SKSpriteNode()
+    var rageTileLTexture = SKTexture(imageNamed: "RageTileLarge")
     
     enum bitMasks: UInt32 {
         case hero = 0b1
-        case ground = 0b10
+        case rageTileL = 0b10
     }
     
     override func didMove(to view: SKView) {
-        addHero()
+        setHero()
+        setRageTiles()
     }
     
-    func addHero() {
+    func setHero() {
         hero = childNode(withName: "hero") as! SKSpriteNode
         hero.physicsBody = SKPhysicsBody(texture: heroTexture, size: hero.size)
         hero.physicsBody?.categoryBitMask = bitMasks.hero.rawValue
-        hero.physicsBody?.contactTestBitMask = bitMasks.ground.rawValue
-        hero.physicsBody?.collisionBitMask = bitMasks.ground.rawValue
+        hero.physicsBody?.contactTestBitMask = bitMasks.rageTileL.rawValue
+        hero.physicsBody?.collisionBitMask = bitMasks.rageTileL.rawValue
+        hero.physicsBody?.allowsRotation = false
+    }
+    
+    func setRageTiles() {
+        rageTileL = childNode(withName: "rageTileL") as! SKSpriteNode
+        rageTileL.physicsBody = SKPhysicsBody(texture: rageTileLTexture, size: rageTileL.size)
+        rageTileL.physicsBody?.categoryBitMask = bitMasks.rageTileL.rawValue
+        rageTileL.physicsBody?.contactTestBitMask = bitMasks.hero.rawValue
+        rageTileL.physicsBody?.collisionBitMask = bitMasks.hero.rawValue
+        rageTileL.physicsBody?.affectedByGravity = false
+        rageTileL.physicsBody?.isDynamic = false
+        rageTileL.physicsBody?.friction = 1
+        rageTileL.zPosition = 20
     }
 }
