@@ -21,6 +21,11 @@ struct ContentView: View {
     
     var body: some View {
         SpriteView(scene: self.scene)
+        
+        /// for debugging option
+        /*
+         SpriteView(scene: self.scene, debugOptions: [.showsFPS, .showsPhysics])
+         */
             .ignoresSafeArea()
     }
 }
