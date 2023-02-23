@@ -24,13 +24,18 @@ class SceneManager: SKScene, SKPhysicsContactDelegate {
         entityManager = EntityManager(scene: self)
         
         // Add player
-        let player = Player(imageName: "Hero")
+        let player = Player(imageName: "Player")
         if let spriteComponent = player.component(ofType: SpriteComponent.self) {
             spriteComponent.node.position = CGPoint(
                 x: -525,
                 y: -160
             )
-            spriteComponent.node.size = CGSize(width: 31, height: 31)
+            
+            let originalWidth = spriteComponent.node.texture!.size().width
+            let originalHeight = spriteComponent.node.texture!.size().height
+            spriteComponent.node.size = CGSize(
+                width: originalWidth / 31,
+                height: originalHeight / 31)
         }
         entityManager.add(player)
         

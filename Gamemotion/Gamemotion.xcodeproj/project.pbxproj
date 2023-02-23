@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		88633C1329A4B75B0095FFED /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C1229A4B75B0095FFED /* GameController.swift */; };
 		88633C1629A4BDC70095FFED /* RageScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1529A4BDC70095FFED /* RageScene.sks */; };
-		88633C1829A4BF020095FFED /* GroundPhysics.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1729A4BF020095FFED /* GroundPhysics.sks */; };
-		88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */; };
 		88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1B29A4BF4F0095FFED /* Assets.xcassets */; };
 		88633C2629A63AE90095FFED /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C2529A63AE90095FFED /* SpriteComponent.swift */; };
 		88633C3129A75B060095FFED /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3029A75B060095FFED /* Player.swift */; };
@@ -27,8 +25,6 @@
 /* Begin PBXFileReference section */
 		88633C1229A4B75B0095FFED /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		88633C1529A4BDC70095FFED /* RageScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RageScene.sks; sourceTree = "<group>"; };
-		88633C1729A4BF020095FFED /* GroundPhysics.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GroundPhysics.sks; sourceTree = "<group>"; };
-		88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExampleTiles.sks; sourceTree = "<group>"; };
 		88633C1B29A4BF4F0095FFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88633C2529A63AE90095FFED /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		88633C3029A75B060095FFED /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -67,8 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				88633C1529A4BDC70095FFED /* RageScene.sks */,
-				88633C1729A4BF020095FFED /* GroundPhysics.sks */,
-				88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */,
 				88633C1B29A4BF4F0095FFED /* Assets.xcassets */,
 			);
 			path = SpriteKit;
@@ -209,9 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88633C1629A4BDC70095FFED /* RageScene.sks in Resources */,
-				88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */,
 				AC9747C8299CE49C005D525E /* Preview Assets.xcassets in Resources */,
-				88633C1829A4BF020095FFED /* GroundPhysics.sks in Resources */,
 				88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */,
 				AC9747C5299CE49C005D525E /* Assets.xcassets in Resources */,
 			);
