@@ -12,6 +12,7 @@ class SpriteComponent: GKComponent {
     
     let node: SKSpriteNode
     
+    // TODO: add a parameter to handle the texture resizing
     init(texture: SKTexture) {
         node = SKSpriteNode(texture: texture)
         super.init()

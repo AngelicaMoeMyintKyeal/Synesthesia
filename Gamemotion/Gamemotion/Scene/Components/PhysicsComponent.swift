@@ -17,14 +17,14 @@ class PhysicsComponent: GKComponent {
         case ground = 0b10
     }
 
-    init(texture: SKTexture, bitMask: bitMasks) {
+    init(texture: SKTexture, category: bitMasks, contact: bitMasks, collision: bitMasks) {
         physics = SKPhysicsBody(texture: texture, size: texture.size())
-        physics.categoryBitMask = bitMask.rawValue
-        physics.contactTestBitMask = bitMasks.ground.rawValue
-        physics.collisionBitMask = bitMasks.ground.rawValue
+        physics.categoryBitMask = category.rawValue
+        physics.contactTestBitMask = contact.rawValue
+        physics.collisionBitMask = collision.rawValue
         super.init()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
