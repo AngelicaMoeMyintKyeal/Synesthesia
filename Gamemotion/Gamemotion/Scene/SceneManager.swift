@@ -1,40 +1,45 @@
 //
-//  GameScene.swift
+//  SceneManager.swift
 //  Gamemotion
 //
-//  Created by Htet Myat Moe Myint Kyeal on 21/02/23.
+//  Created by Pierpaolo Siciliano on 23/02/23.
 //
 
-import Foundation
 import SpriteKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class SceneManager: SKScene, SKPhysicsContactDelegate {
     
-    var hero = SKSpriteNode()
-    var heroTexture = SKTexture(imageNamed: "Hero")
-    
+    // code from GameScene
     var rageTileL = SKSpriteNode()
     var rageTileLTexture = SKTexture(imageNamed: "RageTileLarge")
-    
+
     enum bitMasks: UInt32 {
         case hero = 0b1
         case rageTileL = 0b10
     }
     
+    var entityManager: EntityManager!
+    
     override func didMove(to view: SKView) {
-        setHero()
+        entityManager = EntityManager(scene: self)
+        
+        // Add player
+        let player = Player(imageName: "Hero")
+        if let spriteComponent = player.component(ofType: SpriteComponent.self) {
+            spriteComponent.node.position = CGPoint(
+                x: -525,
+                y: -160
+            )
+            spriteComponent.node.size = CGSize(width: 31, height: 31)
+        }
+        entityManager.add(player)
+        
+        // Add whatever else
+
+        // code from GameScene
         setRageTiles()
     }
-    
-    func setHero() {
-        hero = childNode(withName: "hero") as! SKSpriteNode
-        hero.physicsBody = SKPhysicsBody(texture: heroTexture, size: hero.size)
-        hero.physicsBody?.categoryBitMask = bitMasks.hero.rawValue
-        hero.physicsBody?.contactTestBitMask = bitMasks.rageTileL.rawValue
-        hero.physicsBody?.collisionBitMask = bitMasks.rageTileL.rawValue
-        hero.physicsBody?.allowsRotation = false
-    }
-    
+
     func setRageTiles() {
         rageTileL = childNode(withName: "rageTileL") as! SKSpriteNode
         rageTileL.physicsBody = SKPhysicsBody(texture: rageTileLTexture, size: rageTileL.size)

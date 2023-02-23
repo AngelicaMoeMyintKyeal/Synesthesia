@@ -5,22 +5,28 @@
 //  Created by Pierpaolo Siciliano on 21/02/23.
 //
 
-import SpriteKit
 import GameController
+import GameplayKit
+import SpriteKit
 
 class GameController: NSObject, ObservableObject {
     
+    // Actions
     private var isJumping = false
     private var isAttacking = false
     
-    private var gamePadLeft: GCControllerDirectionPad?
-    private var gamePadRight: GCControllerDirectionPad?
+    // Gamepad
     private var gamePadCurrent: GCController?
+    var leftAnalog: GCControllerDirectionPad?
+    var isHoldingRight = false
+    var isHoldingLeft = false
     
-    init(SKScene: SKScene) {
+    // Entities
+    var entities: [GKEntity] = []
+    
+    init(scene: SKScene) {
         super.init()
         
-        // Set up game controller.
         setupGameController()
     }
     
@@ -40,7 +46,6 @@ class GameController: NSObject, ObservableObject {
             return
         }
         print("controller connected")
-//        unregisterGameController()
         
         registerGameController(gameController)
         
@@ -51,19 +56,13 @@ class GameController: NSObject, ObservableObject {
     @objc
     func handleControllerDidDisconnect(_ notification: Notification) {
         print("controller disconnected")
-        unregisterGameController()
-    }
-    
-    func unregisterGameController() {
-        gamePadLeft = nil
-        gamePadRight = nil
-        gamePadCurrent = nil
     }
     
     func registerGameController(_ gameController: GCController) {
+        var dPad: GCControllerDirectionPad?
         var buttonA: GCControllerButtonInput?
         var buttonB: GCControllerButtonInput?
-        var rightTrigger: GCControllerButtonInput?
+        var buttonX: GCControllerButtonInput?
         
         weak var weakController = self
         
@@ -72,29 +71,59 @@ class GameController: NSObject, ObservableObject {
             return
         }
         
-        self.gamePadLeft = gamepad.leftThumbstick
-        self.gamePadRight = gamepad.rightThumbstick
-        buttonA = gamepad.buttonA
-        buttonB = gamepad.buttonB
-        rightTrigger = gamepad.rightTrigger
+        dPad = gamepad.dpad
+        self.leftAnalog = gamepad.leftThumbstick
+        buttonA = gamepad.buttonA // Cross on Playstation
+        buttonB = gamepad.buttonB // Circle on Playstation
+        buttonX = gamepad.buttonX // Square on Playstation
         
-        buttonA?.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+        buttonA?.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
             guard let strongController = weakController else {
                 return
             }
-            strongController.controllerJump(pressed)
+            if pressed {
+                print("jump")
+                strongController.controllerJump(pressed)
+            }
         }
         
-        buttonB?.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+        buttonB?.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
             guard let strongController = weakController else {
                 return
             }
-            strongController.controllerAttack()
+            if pressed {
+                print("attack")
+                strongController.controllerAttack()
+            }
         }
         
-        rightTrigger?.pressedChangedHandler = buttonB?.valueChangedHandler
+        buttonX?.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+//            guard let strongController = weakController else {
+//                return
+//            }
+            if pressed {
+                print("dash")
+            }
+        }
+        
+        dPad?.up.pressedChangedHandler = buttonA?.pressedChangedHandler
+        
+        dPad?.right.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+//            guard let strongController = weakController else {
+//                return
+//            }
+            self.isHoldingRight = pressed
+        }
+        
+        dPad?.left.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
+//            guard let strongController = weakController else {
+//                return
+//            }
+            self.isHoldingLeft = pressed
+        }
     }
     
+    // MARK: - Actions
     func controllerJump(_ controllerJump: Bool) {
         isJumping = controllerJump
     }
@@ -105,6 +134,10 @@ class GameController: NSObject, ObservableObject {
 //            self.character!.attack()
 //        }
         isAttacking = true
+    }
+    
+    func controllerMove() {
+        
     }
     
     /// hints

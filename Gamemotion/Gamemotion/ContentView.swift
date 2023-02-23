@@ -9,7 +9,7 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
-    @StateObject var gameController = GameController(SKScene: SKScene(fileNamed: "RageScene")!)
+    @StateObject var gameController = GameController(scene: SKScene(fileNamed: "RageScene")!)
     var rageScene = SKScene(fileNamed: "RageScene")!
     
     var scene: SKScene {
