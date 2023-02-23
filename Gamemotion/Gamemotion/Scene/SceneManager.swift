@@ -42,14 +42,4 @@ class SceneManager: SKScene, SKPhysicsContactDelegate {
         
         // Add whatever else
     }
-
-//    func setRageTiles() {
-//        rageTileL = childNode(withName: "rageTileL") as! SKSpriteNode
-//        rageTileL.physicsBody = SKPhysicsBody(texture: rageTileLTexture, size: rageTileL.size)
-//        rageTileL.physicsBody?.categoryBitMask = bitMasks.ground.rawValue
-//        rageTileL.physicsBody?.contactTestBitMask = bitMasks.player.rawValue
-//        rageTileL.physicsBody?.collisionBitMask = bitMasks.player.rawValue
-//        rageTileL.physicsBody?.affectedByGravity = false
-//        rageTileL.physicsBody?.isDynamic = false
-//    }
 }

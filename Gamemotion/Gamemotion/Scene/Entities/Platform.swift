@@ -23,6 +23,8 @@ class Platform: GKEntity {
             contact: .player,
             collision: .player
         )
+        physicsComponent.physics.affectedByGravity = false
+        physicsComponent.physics.isDynamic = false
         addComponent(physicsComponent)
     }
     
