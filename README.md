@@ -64,7 +64,7 @@ Write description of the game.
   - [Pierpaolo Siciliano](https://github.com/PierSic-dev)
   
 - Main Game Characters Design Artists
-  - [Salvatore Amato]()
+  - [Salvatore Amato](https://github.com/Salvatore-Amato)
   - [Anja Hysa]()
   - [Lara De Sena]()
   - [Giovanni Mandato]()
