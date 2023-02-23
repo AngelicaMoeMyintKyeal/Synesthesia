@@ -5,17 +5,26 @@
 //  Created by Pierpaolo Siciliano on 21/02/23.
 //
 
-import SpriteKit
 import GameController
+import GameplayKit
+import SpriteKit
 
 class GameController: NSObject, ObservableObject {
     
+    // Actions
     private var isJumping = false
     private var isAttacking = false
     
+    // Gamepad
     private var gamePadCurrent: GCController?
+    var leftAnalog: GCControllerDirectionPad?
+    var isHoldingRight = false
+    var isHoldingLeft = false
     
-    init(SKScene: SKScene) {
+    // Entities
+    var entities: [GKEntity] = []
+    
+    init(scene: SKScene) {
         super.init()
         
         setupGameController()
@@ -51,12 +60,9 @@ class GameController: NSObject, ObservableObject {
     
     func registerGameController(_ gameController: GCController) {
         var dPad: GCControllerDirectionPad?
-        var leftAnalog: GCControllerDirectionPad?
         var buttonA: GCControllerButtonInput?
         var buttonB: GCControllerButtonInput?
         var buttonX: GCControllerButtonInput?
-        var isHoldingRight = false
-        var isHoldingLeft = false
         
         weak var weakController = self
         
@@ -66,7 +72,7 @@ class GameController: NSObject, ObservableObject {
         }
         
         dPad = gamepad.dpad
-        leftAnalog = gamepad.leftThumbstick
+        self.leftAnalog = gamepad.leftThumbstick
         buttonA = gamepad.buttonA // Cross on Playstation
         buttonB = gamepad.buttonB // Circle on Playstation
         buttonX = gamepad.buttonX // Square on Playstation
@@ -106,17 +112,18 @@ class GameController: NSObject, ObservableObject {
 //            guard let strongController = weakController else {
 //                return
 //            }
-            isHoldingRight = pressed
+            self.isHoldingRight = pressed
         }
         
         dPad?.left.pressedChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
 //            guard let strongController = weakController else {
 //                return
 //            }
-            isHoldingLeft = pressed
+            self.isHoldingLeft = pressed
         }
     }
     
+    // MARK: - Actions
     func controllerJump(_ controllerJump: Bool) {
         isJumping = controllerJump
     }
@@ -129,6 +136,9 @@ class GameController: NSObject, ObservableObject {
         isAttacking = true
     }
     
+    func controllerMove() {
+        
+    }
     
     /// hints
 //    func showHints() {
