@@ -62,12 +62,13 @@ Write description of the game.
 - Main Game Creation Developers
   - [Htet Myat Moe Myin Kyeal](https://github.com/AngelicaMoeMyintKyeal)
   - [Pierpaolo Siciliano](https://github.com/PierSic-dev)
+  - [Giovanni Mandato(Standby Developer)](https://github.com/GiovanniMandato)
   
 - Main Game Characters Design Artists
   - [Salvatore Amato](https://github.com/Salvatore-Amato)
   - [Anja Hysa]()
   - [Lara De Sena]()
-  - [Giovanni Mandato]()
+  - [Giovanni Mandato](https://github.com/GiovanniMandato)
 
 ## License
 
