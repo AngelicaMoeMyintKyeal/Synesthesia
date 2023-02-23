@@ -9,8 +9,8 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
-    @StateObject var gameController = GameController(SKScene: SKScene(fileNamed: "Level0Scene")!)
-    var scene = SKScene(fileNamed: "Level0Scene")!
+    @StateObject var gameController = GameController(SKScene: SKScene(fileNamed: "RageScene")!)
+    var scene = SKScene(fileNamed: "RageScene")!
     
     var body: some View {
         SpriteView(scene: self.scene)
