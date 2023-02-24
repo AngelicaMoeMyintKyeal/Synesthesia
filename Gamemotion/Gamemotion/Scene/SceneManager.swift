@@ -17,7 +17,7 @@ class SceneManager: SKScene, SKPhysicsContactDelegate {
         // Add player
         let player = Player(imageName: "Player")
         if let spriteComponent = player.component(ofType: SpriteComponent.self) {
-            spriteComponent.node.position = CGPoint(x: -525,y: -160)
+            spriteComponent.node.position = CGPoint(x: -525,y: -150)
         }
         entityManager.add(player)
         
