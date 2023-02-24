@@ -18,12 +18,7 @@ class SceneManager: SKScene, SKPhysicsContactDelegate {
         let player = Player(imageName: "Player")
         if let spriteComponent = player.component(ofType: SpriteComponent.self) {
             spriteComponent.node.position = CGPoint(x: -525,y: -160)
-            
-            let originalWidth = spriteComponent.node.texture!.size().width
-            let originalHeight = spriteComponent.node.texture!.size().height
-            spriteComponent.node.size = CGSize(
-                width: originalWidth / 31,
-                height: originalHeight / 31)
+            spriteComponent.scale(factor: 0.03)
         }
         entityManager.add(player)
         
@@ -31,12 +26,7 @@ class SceneManager: SKScene, SKPhysicsContactDelegate {
         let platform = Platform(imageName: "RageTileSmall")
         if let spriteComponent = platform.component(ofType: SpriteComponent.self) {
             spriteComponent.node.position = CGPoint(x: -525, y: -240)
-            
-            let originalWidth = spriteComponent.node.texture!.size().width
-            let originalHeight = spriteComponent.node.texture!.size().height
-            spriteComponent.node.size = CGSize(
-                width: originalWidth / 4,
-                height: originalHeight / 4)
+            spriteComponent.scale(factor: 0.02)
         }
         entityManager.add(platform)
         

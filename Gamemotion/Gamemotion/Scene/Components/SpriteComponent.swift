@@ -21,4 +21,11 @@ class SpriteComponent: GKComponent {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func scale(factor: Double) {
+        node.size = CGSize(
+            width: node.texture!.size().width * factor,
+            height: node.texture!.size().height * factor
+        )
+    }
 }
