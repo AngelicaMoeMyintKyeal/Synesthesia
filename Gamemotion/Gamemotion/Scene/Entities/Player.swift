@@ -14,11 +14,11 @@ class Player: GKEntity {
         super.init()
         let texture = SKTexture(imageNamed: imageName)
         
-        let spriteComponent = SpriteComponent(texture: texture)
+        let spriteComponent = SpriteComponent(texture: texture, scaleFactor: 0.03)
         addComponent(spriteComponent)
         
         let physicsComponent = PhysicsComponent(
-            texture: texture,
+            node: spriteComponent.node,
             category: .player,
             contact: .ground,
             collision: .ground

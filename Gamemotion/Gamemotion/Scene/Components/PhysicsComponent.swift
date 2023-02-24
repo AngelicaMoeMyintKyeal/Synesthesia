@@ -17,11 +17,16 @@ class PhysicsComponent: GKComponent {
         case ground = 0b10
     }
 
-    init(texture: SKTexture, category: bitMasks, contact: bitMasks, collision: bitMasks) {
-        physics = SKPhysicsBody(texture: texture, size: texture.size())
+    init(node: SKSpriteNode, category: bitMasks, contact: bitMasks, collision: bitMasks) {
+        if let texture = node.texture {
+            physics = SKPhysicsBody(texture: texture, size: node.size)
+        } else {
+            physics = SKPhysicsBody()
+        }
         physics.categoryBitMask = category.rawValue
         physics.contactTestBitMask = contact.rawValue
         physics.collisionBitMask = collision.rawValue
+        node.physicsBody = physics
         super.init()
     }
     
