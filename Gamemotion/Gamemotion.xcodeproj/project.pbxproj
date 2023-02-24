@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		88633C1329A4B75B0095FFED /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C1229A4B75B0095FFED /* GameController.swift */; };
 		88633C1629A4BDC70095FFED /* RageScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1529A4BDC70095FFED /* RageScene.sks */; };
-		88633C1829A4BF020095FFED /* GroundPhysics.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1729A4BF020095FFED /* GroundPhysics.sks */; };
-		88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */; };
 		88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1B29A4BF4F0095FFED /* Assets.xcassets */; };
 		88633C2629A63AE90095FFED /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C2529A63AE90095FFED /* SpriteComponent.swift */; };
 		88633C3129A75B060095FFED /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3029A75B060095FFED /* Player.swift */; };
 		88633C3329A75CD40095FFED /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3229A75CD40095FFED /* EntityManager.swift */; };
 		88633C3529A761310095FFED /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3429A761310095FFED /* SceneManager.swift */; };
 		88633C3729A7646E0095FFED /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3629A7646E0095FFED /* PhysicsComponent.swift */; };
+		88633C3929A77EA40095FFED /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3829A77EA40095FFED /* Platform.swift */; };
 		AC9747C1299CE49B005D525E /* GamemotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9747C0299CE49B005D525E /* GamemotionApp.swift */; };
 		AC9747C3299CE49B005D525E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9747C2299CE49B005D525E /* ContentView.swift */; };
 		AC9747C5299CE49C005D525E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9747C4299CE49C005D525E /* Assets.xcassets */; };
@@ -27,14 +26,13 @@
 /* Begin PBXFileReference section */
 		88633C1229A4B75B0095FFED /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		88633C1529A4BDC70095FFED /* RageScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RageScene.sks; sourceTree = "<group>"; };
-		88633C1729A4BF020095FFED /* GroundPhysics.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GroundPhysics.sks; sourceTree = "<group>"; };
-		88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExampleTiles.sks; sourceTree = "<group>"; };
 		88633C1B29A4BF4F0095FFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88633C2529A63AE90095FFED /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		88633C3029A75B060095FFED /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		88633C3229A75CD40095FFED /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		88633C3429A761310095FFED /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		88633C3629A7646E0095FFED /* PhysicsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComponent.swift; sourceTree = "<group>"; };
+		88633C3829A77EA40095FFED /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		AC9747BD299CE49B005D525E /* Gamemotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamemotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9747C0299CE49B005D525E /* GamemotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamemotionApp.swift; sourceTree = "<group>"; };
 		AC9747C2299CE49B005D525E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,8 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				88633C1529A4BDC70095FFED /* RageScene.sks */,
-				88633C1729A4BF020095FFED /* GroundPhysics.sks */,
-				88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */,
 				88633C1B29A4BF4F0095FFED /* Assets.xcassets */,
 			);
 			path = SpriteKit;
@@ -88,6 +84,7 @@
 			children = (
 				88633C3229A75CD40095FFED /* EntityManager.swift */,
 				88633C3029A75B060095FFED /* Player.swift */,
+				88633C3829A77EA40095FFED /* Platform.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -209,9 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88633C1629A4BDC70095FFED /* RageScene.sks in Resources */,
-				88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */,
 				AC9747C8299CE49C005D525E /* Preview Assets.xcassets in Resources */,
-				88633C1829A4BF020095FFED /* GroundPhysics.sks in Resources */,
 				88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */,
 				AC9747C5299CE49C005D525E /* Assets.xcassets in Resources */,
 			);
@@ -224,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88633C3929A77EA40095FFED /* Platform.swift in Sources */,
 				AC9747C3299CE49B005D525E /* ContentView.swift in Sources */,
 				88633C1329A4B75B0095FFED /* GameController.swift in Sources */,
 				88633C2629A63AE90095FFED /* SpriteComponent.swift in Sources */,

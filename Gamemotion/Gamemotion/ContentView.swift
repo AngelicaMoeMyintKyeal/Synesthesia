@@ -14,18 +14,16 @@ struct ContentView: View {
     
     var scene: SKScene {
         let scene = self.rageScene
-            scene.size = CGSize(width: 1200, height: 600)
-            scene.scaleMode = .fill
-            return scene
-        }
+        scene.size = CGSize(width: 1200, height: 600)
+        scene.scaleMode = .fill
+        return scene
+    }
     
     var body: some View {
-        SpriteView(scene: self.scene)
+//        SpriteView(scene: self.scene)
         
-        /// for debugging option
-        /*
-         SpriteView(scene: self.scene, debugOptions: [.showsFPS, .showsPhysics])
-         */
+        /// Debugging options
+        SpriteView(scene: self.scene, debugOptions: [.showsFPS, .showsPhysics])
             .ignoresSafeArea()
     }
 }

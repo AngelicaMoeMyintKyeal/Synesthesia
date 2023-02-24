@@ -12,8 +12,14 @@ class SpriteComponent: GKComponent {
     
     let node: SKSpriteNode
     
-    init(texture: SKTexture) {
+    init(texture: SKTexture, scaleFactor: Double = 1.0) {
         node = SKSpriteNode(texture: texture)
+        if scaleFactor != 1.0 {
+            node.size = CGSize(
+                width: node.texture!.size().width * scaleFactor,
+                height: node.texture!.size().height * scaleFactor
+            )
+        }
         super.init()
     }
     

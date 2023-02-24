@@ -1,5 +1,5 @@
 //
-//  Player.swift
+//  Platform.swift
 //  Gamemotion
 //
 //  Created by Pierpaolo Siciliano on 23/02/23.
@@ -8,21 +8,23 @@
 import SpriteKit
 import GameplayKit
 
-class Player: GKEntity {
+class Platform: GKEntity {
     
     init(imageName: String) {
         super.init()
         let texture = SKTexture(imageNamed: imageName)
         
-        let spriteComponent = SpriteComponent(texture: texture, scaleFactor: 0.03)
+        let spriteComponent = SpriteComponent(texture: texture, scaleFactor: 0.2)
         addComponent(spriteComponent)
         
         let physicsComponent = PhysicsComponent(
             node: spriteComponent.node,
-            category: .player,
-            contact: .ground,
-            collision: .ground
+            category: .ground,
+            contact: .player,
+            collision: .player
         )
+        physicsComponent.physics.affectedByGravity = false
+        physicsComponent.physics.isDynamic = false
         addComponent(physicsComponent)
     }
     
