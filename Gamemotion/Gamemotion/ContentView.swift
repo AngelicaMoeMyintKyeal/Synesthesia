@@ -23,7 +23,7 @@ struct ContentView: View {
 //        SpriteView(scene: self.scene)
         
         /// Debugging options
-        SpriteView(scene: self.scene, debugOptions: [.showsFPS, .showsPhysics])
+        SpriteView(scene: self.scene, debugOptions: [.showsFPS, .showsPhysics, .showsNodeCount])
             .ignoresSafeArea()
     }
 }

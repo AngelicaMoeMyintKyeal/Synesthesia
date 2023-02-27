@@ -23,6 +23,7 @@ class Player: GKEntity {
             contact: .ground,
             collision: .ground
         )
+        physicsComponent.physics.allowsRotation = false
         addComponent(physicsComponent)
     }
     
