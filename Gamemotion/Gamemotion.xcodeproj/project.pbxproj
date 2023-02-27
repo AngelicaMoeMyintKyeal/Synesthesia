@@ -27,6 +27,7 @@
 		ACE3937929A8D431008949A5 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937829A8D431008949A5 /* Rain.sks */; };
 		ACE3937B29A8D442008949A5 /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937A29A8D442008949A5 /* SmokeParticle.sks */; };
 		ACE3937D29A8D453008949A5 /* FearParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937C29A8D453008949A5 /* FearParticle.sks */; };
+		ACE3938229ACA633008949A5 /* Prologue.mov in Resources */ = {isa = PBXBuildFile; fileRef = ACE3938129ACA633008949A5 /* Prologue.mov */; };
 		ACEDE18229A50BF7008C9A71 /* PrologueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDE18129A50BF7008C9A71 /* PrologueView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		ACE3937829A8D431008949A5 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
 		ACE3937A29A8D442008949A5 /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticle.sks; sourceTree = "<group>"; };
 		ACE3937C29A8D453008949A5 /* FearParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FearParticle.sks; sourceTree = "<group>"; };
+		ACE3938129ACA633008949A5 /* Prologue.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Prologue.mov; sourceTree = "<group>"; };
 		ACEDE18129A50BF7008C9A71 /* PrologueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrologueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 		AC9747BF299CE49B005D525E /* Gamemotion */ = {
 			isa = PBXGroup;
 			children = (
+				ACE3938129ACA633008949A5 /* Prologue.mov */,
 				AC9747C0299CE49B005D525E /* GamemotionApp.swift */,
 				AC9747C2299CE49B005D525E /* ContentView.swift */,
 				ACEDE18029A50B9A008C9A71 /* View */,
@@ -238,6 +241,7 @@
 			files = (
 				ACE3937529A8D40B008949A5 /* Bokeh.sks in Resources */,
 				ACE3937929A8D431008949A5 /* Rain.sks in Resources */,
+				ACE3938229ACA633008949A5 /* Prologue.mov in Resources */,
 				ACE3937D29A8D453008949A5 /* FearParticle.sks in Resources */,
 				88633C1629A4BDC70095FFED /* RageScene.sks in Resources */,
 				88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */,
