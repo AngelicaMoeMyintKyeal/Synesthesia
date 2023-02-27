@@ -16,6 +16,7 @@
 		88633C3529A761310095FFED /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3429A761310095FFED /* SceneManager.swift */; };
 		88633C3729A7646E0095FFED /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3629A7646E0095FFED /* PhysicsComponent.swift */; };
 		88633C3929A77EA40095FFED /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3829A77EA40095FFED /* Platform.swift */; };
+		AC30D73E29ACB2A00059B1F2 /* VideoSceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30D73D29ACB2A00059B1F2 /* VideoSceneManager.swift */; };
 		AC9747C1299CE49B005D525E /* GamemotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9747C0299CE49B005D525E /* GamemotionApp.swift */; };
 		AC9747C3299CE49B005D525E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9747C2299CE49B005D525E /* ContentView.swift */; };
 		AC9747C5299CE49C005D525E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9747C4299CE49C005D525E /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		88633C3429A761310095FFED /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		88633C3629A7646E0095FFED /* PhysicsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsComponent.swift; sourceTree = "<group>"; };
 		88633C3829A77EA40095FFED /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		AC30D73D29ACB2A00059B1F2 /* VideoSceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSceneManager.swift; sourceTree = "<group>"; };
 		AC9747BD299CE49B005D525E /* Gamemotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamemotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9747C0299CE49B005D525E /* GamemotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamemotionApp.swift; sourceTree = "<group>"; };
 		AC9747C2299CE49B005D525E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				88633C1529A4BDC70095FFED /* RageScene.sks */,
-				88633C1729A4BF020095FFED /* GroundPhysics.sks */,
-				88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */,
 				ACE3938029A8D793008949A5 /* Particles */,
 				88633C1B29A4BF4F0095FFED /* Assets.xcassets */,
 			);
@@ -167,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				88633C3429A761310095FFED /* SceneManager.swift */,
+				AC30D73D29ACB2A00059B1F2 /* VideoSceneManager.swift */,
 				88633C2F29A75AF20095FFED /* Entities */,
 				88633C2229A63A060095FFED /* Components */,
 			);
@@ -244,7 +245,6 @@
 				ACE3938229ACA633008949A5 /* Prologue.mov in Resources */,
 				ACE3937D29A8D453008949A5 /* FearParticle.sks in Resources */,
 				88633C1629A4BDC70095FFED /* RageScene.sks in Resources */,
-				88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */,
 				ACE3937129A8D383008949A5 /* FlameParticle.sks in Resources */,
 				AC9747C8299CE49C005D525E /* Preview Assets.xcassets in Resources */,
 				88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */,
@@ -269,6 +269,7 @@
 				ACEDE18229A50BF7008C9A71 /* PrologueView.swift in Sources */,
 				88633C3529A761310095FFED /* SceneManager.swift in Sources */,
 				88633C3129A75B060095FFED /* Player.swift in Sources */,
+				AC30D73E29ACB2A00059B1F2 /* VideoSceneManager.swift in Sources */,
 				88633C3729A7646E0095FFED /* PhysicsComponent.swift in Sources */,
 				88633C3329A75CD40095FFED /* EntityManager.swift in Sources */,
 				AC9747C1299CE49B005D525E /* GamemotionApp.swift in Sources */,
