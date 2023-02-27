@@ -20,6 +20,13 @@
 		AC9747C3299CE49B005D525E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9747C2299CE49B005D525E /* ContentView.swift */; };
 		AC9747C5299CE49C005D525E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9747C4299CE49C005D525E /* Assets.xcassets */; };
 		AC9747C8299CE49C005D525E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9747C7299CE49C005D525E /* Preview Assets.xcassets */; };
+		ACE3937129A8D383008949A5 /* FlameParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937029A8D383008949A5 /* FlameParticle.sks */; };
+		ACE3937329A8D3E7008949A5 /* OnboardingParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937229A8D3E7008949A5 /* OnboardingParticle.sks */; };
+		ACE3937529A8D40B008949A5 /* Bokeh.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937429A8D40B008949A5 /* Bokeh.sks */; };
+		ACE3937729A8D41E008949A5 /* Fireflies.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937629A8D41E008949A5 /* Fireflies.sks */; };
+		ACE3937929A8D431008949A5 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937829A8D431008949A5 /* Rain.sks */; };
+		ACE3937B29A8D442008949A5 /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937A29A8D442008949A5 /* SmokeParticle.sks */; };
+		ACE3937D29A8D453008949A5 /* FearParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACE3937C29A8D453008949A5 /* FearParticle.sks */; };
 		ACEDE18229A50BF7008C9A71 /* PrologueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDE18129A50BF7008C9A71 /* PrologueView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +46,13 @@
 		AC9747C4299CE49C005D525E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC9747C7299CE49C005D525E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC9747C9299CE49C005D525E /* Gamemotion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gamemotion.entitlements; sourceTree = "<group>"; };
+		ACE3937029A8D383008949A5 /* FlameParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FlameParticle.sks; sourceTree = "<group>"; };
+		ACE3937229A8D3E7008949A5 /* OnboardingParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OnboardingParticle.sks; sourceTree = "<group>"; };
+		ACE3937429A8D40B008949A5 /* Bokeh.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bokeh.sks; sourceTree = "<group>"; };
+		ACE3937629A8D41E008949A5 /* Fireflies.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fireflies.sks; sourceTree = "<group>"; };
+		ACE3937829A8D431008949A5 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
+		ACE3937A29A8D442008949A5 /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticle.sks; sourceTree = "<group>"; };
+		ACE3937C29A8D453008949A5 /* FearParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FearParticle.sks; sourceTree = "<group>"; };
 		ACEDE18129A50BF7008C9A71 /* PrologueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrologueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				88633C1529A4BDC70095FFED /* RageScene.sks */,
+				88633C1729A4BF020095FFED /* GroundPhysics.sks */,
+				88633C1A29A4BF4F0095FFED /* ExampleTiles.sks */,
+				ACE3938029A8D793008949A5 /* Particles */,
 				88633C1B29A4BF4F0095FFED /* Assets.xcassets */,
 			);
 			path = SpriteKit;
@@ -127,6 +144,20 @@
 				AC9747C7299CE49C005D525E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACE3938029A8D793008949A5 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3937029A8D383008949A5 /* FlameParticle.sks */,
+				ACE3937229A8D3E7008949A5 /* OnboardingParticle.sks */,
+				ACE3937429A8D40B008949A5 /* Bokeh.sks */,
+				ACE3937629A8D41E008949A5 /* Fireflies.sks */,
+				ACE3937829A8D431008949A5 /* Rain.sks */,
+				ACE3937A29A8D442008949A5 /* SmokeParticle.sks */,
+				ACE3937C29A8D453008949A5 /* FearParticle.sks */,
+			);
+			path = Particles;
 			sourceTree = "<group>";
 		};
 		ACE4E45229A4E596000208D2 /* Scene */ = {
@@ -205,10 +236,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE3937529A8D40B008949A5 /* Bokeh.sks in Resources */,
+				ACE3937929A8D431008949A5 /* Rain.sks in Resources */,
+				ACE3937D29A8D453008949A5 /* FearParticle.sks in Resources */,
 				88633C1629A4BDC70095FFED /* RageScene.sks in Resources */,
+				88633C1C29A4BF4F0095FFED /* ExampleTiles.sks in Resources */,
+				ACE3937129A8D383008949A5 /* FlameParticle.sks in Resources */,
 				AC9747C8299CE49C005D525E /* Preview Assets.xcassets in Resources */,
 				88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */,
 				AC9747C5299CE49C005D525E /* Assets.xcassets in Resources */,
+				ACE3937329A8D3E7008949A5 /* OnboardingParticle.sks in Resources */,
+				ACE3937729A8D41E008949A5 /* Fireflies.sks in Resources */,
+				ACE3937B29A8D442008949A5 /* SmokeParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +397,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gamemotion/Preview Content\"";
-				DEVELOPMENT_TEAM = AVG85342HW;
+				DEVELOPMENT_TEAM = 4Y299ULQLV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -385,7 +424,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gamemotion/Preview Content\"";
-				DEVELOPMENT_TEAM = AVG85342HW;
+				DEVELOPMENT_TEAM = 4Y299ULQLV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
