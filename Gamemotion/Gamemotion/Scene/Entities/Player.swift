@@ -24,6 +24,7 @@ class Player: GKEntity {
             collision: .ground
         )
         physicsComponent.physics.allowsRotation = false
+        physicsComponent.physics.isDynamic = false
         addComponent(physicsComponent)
     }
     

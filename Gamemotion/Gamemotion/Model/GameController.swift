@@ -11,6 +11,8 @@ import SpriteKit
 
 class GameController: NSObject, ObservableObject {
     
+    var SceneManager: SceneManager?
+    
     // Actions
     private var isJumping = false
     private var isAttacking = false
@@ -21,12 +23,8 @@ class GameController: NSObject, ObservableObject {
     var isHoldingRight = false
     var isHoldingLeft = false
     
-    // Entities
-    var entities: [GKEntity] = []
-    
     init(scene: SKScene) {
         super.init()
-        
         setupGameController()
     }
     
@@ -83,6 +81,7 @@ class GameController: NSObject, ObservableObject {
             }
             if pressed {
                 print("jump")
+                SKAction.moveTo(y: -100, duration: 3.0)
                 strongController.controllerJump(pressed)
             }
         }
