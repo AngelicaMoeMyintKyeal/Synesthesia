@@ -10,6 +10,11 @@ import SpriteKit
 class SceneManager: SKScene, SKPhysicsContactDelegate {
     
     var entityManager: EntityManager!
+//    var videoSceneManager: VideoSceneManager!
+//
+//    override func sceneDidLoad() {
+//        videoSceneManager.languageForVideo(deviceLang: Locale.current.languageCode ?? "en")
+//    }
     
     override func didMove(to view: SKView) {
         entityManager = EntityManager(scene: self)
