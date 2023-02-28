@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88633C1329A4B75B0095FFED /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C1229A4B75B0095FFED /* GameController.swift */; };
-		88633C1629A4BDC70095FFED /* RageScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1529A4BDC70095FFED /* RageScene.sks */; };
+		88633C1629A4BDC70095FFED /* BossScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1529A4BDC70095FFED /* BossScene.sks */; };
 		88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88633C1B29A4BF4F0095FFED /* Assets.xcassets */; };
 		88633C2629A63AE90095FFED /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C2529A63AE90095FFED /* SpriteComponent.swift */; };
 		88633C3129A75B060095FFED /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633C3029A75B060095FFED /* Player.swift */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		88633C1229A4B75B0095FFED /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		88633C1529A4BDC70095FFED /* RageScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RageScene.sks; sourceTree = "<group>"; };
+		88633C1529A4BDC70095FFED /* BossScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BossScene.sks; sourceTree = "<group>"; };
 		88633C1B29A4BF4F0095FFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88633C2529A63AE90095FFED /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		88633C3029A75B060095FFED /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		88633C1929A4BF0A0095FFED /* SpriteKit */ = {
 			isa = PBXGroup;
 			children = (
-				88633C1529A4BDC70095FFED /* RageScene.sks */,
+				88633C1529A4BDC70095FFED /* BossScene.sks */,
 				ACE3938029A8D793008949A5 /* Particles */,
 				88633C1B29A4BF4F0095FFED /* Assets.xcassets */,
 			);
@@ -284,7 +284,7 @@
 				ACE3937529A8D40B008949A5 /* Bokeh.sks in Resources */,
 				ACE3937929A8D431008949A5 /* Rain.sks in Resources */,
 				ACE3937D29A8D453008949A5 /* FearParticle.sks in Resources */,
-				88633C1629A4BDC70095FFED /* RageScene.sks in Resources */,
+				88633C1629A4BDC70095FFED /* BossScene.sks in Resources */,
 				ACE3937129A8D383008949A5 /* FlameParticle.sks in Resources */,
 				AC9747C8299CE49C005D525E /* Preview Assets.xcassets in Resources */,
 				88633C1D29A4BF4F0095FFED /* Assets.xcassets in Resources */,
