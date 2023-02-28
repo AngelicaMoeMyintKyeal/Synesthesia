@@ -21,6 +21,7 @@
 		AC30D74D29ACBDCE0059B1F2 /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30D74C29ACBDCE0059B1F2 /* LocalizationSystem.swift */; };
 		AC30D75029AE02850059B1F2 /* PrologueEng.mov in Resources */ = {isa = PBXBuildFile; fileRef = AC30D74E29AE02850059B1F2 /* PrologueEng.mov */; };
 		AC30D75129AE02850059B1F2 /* PrologueIta.mov in Resources */ = {isa = PBXBuildFile; fileRef = AC30D74F29AE02850059B1F2 /* PrologueIta.mov */; };
+		AC30D75429AE09300059B1F2 /* ParameterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30D75329AE092F0059B1F2 /* ParameterConstants.swift */; };
 		AC9747C1299CE49B005D525E /* GamemotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9747C0299CE49B005D525E /* GamemotionApp.swift */; };
 		AC9747C3299CE49B005D525E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9747C2299CE49B005D525E /* ContentView.swift */; };
 		AC9747C5299CE49C005D525E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9747C4299CE49C005D525E /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		AC30D74C29ACBDCE0059B1F2 /* LocalizationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
 		AC30D74E29AE02850059B1F2 /* PrologueEng.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PrologueEng.mov; sourceTree = "<group>"; };
 		AC30D74F29AE02850059B1F2 /* PrologueIta.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PrologueIta.mov; sourceTree = "<group>"; };
+		AC30D75329AE092F0059B1F2 /* ParameterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterConstants.swift; sourceTree = "<group>"; };
 		AC9747BD299CE49B005D525E /* Gamemotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamemotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9747C0299CE49B005D525E /* GamemotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamemotionApp.swift; sourceTree = "<group>"; };
 		AC9747C2299CE49B005D525E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		AC30D75229AE08B70059B1F2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AC30D75329AE092F0059B1F2 /* ParameterConstants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		AC9747B4299CE49B005D525E = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +169,7 @@
 				ACE4E45229A4E596000208D2 /* Scene */,
 				88633C1429A4B7610095FFED /* Model */,
 				88633C1929A4BF0A0095FFED /* SpriteKit */,
+				AC30D75229AE08B70059B1F2 /* Utilities */,
 				AC30D74B29ACBCD90059B1F2 /* Extension */,
 				AC30D74029ACBBFA0059B1F2 /* Localizations */,
 				AC9747C4299CE49C005D525E /* Assets.xcassets */,
@@ -297,6 +308,7 @@
 				AC9747C3299CE49B005D525E /* ContentView.swift in Sources */,
 				88633C1329A4B75B0095FFED /* GameController.swift in Sources */,
 				88633C2629A63AE90095FFED /* SpriteComponent.swift in Sources */,
+				AC30D75429AE09300059B1F2 /* ParameterConstants.swift in Sources */,
 				ACEDE18229A50BF7008C9A71 /* PrologueView.swift in Sources */,
 				88633C3529A761310095FFED /* SceneManager.swift in Sources */,
 				88633C3129A75B060095FFED /* Player.swift in Sources */,
