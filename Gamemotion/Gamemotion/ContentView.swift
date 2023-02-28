@@ -9,11 +9,11 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
-    @StateObject var gameController = GameController(scene: SKScene(fileNamed: "RageScene")!)
-    var rageScene = SKScene(fileNamed: "RageScene")!
+    @StateObject var gameController = GameController(scene: SKScene(fileNamed: "BossScene")!)
+    var bossScene = SKScene(fileNamed: "BossScene")!
     
     var scene: SKScene {
-        let scene = self.rageScene
+        let scene = self.bossScene
         scene.size = CGSize(width: 1200, height: 600)
         scene.scaleMode = .fill
         return scene

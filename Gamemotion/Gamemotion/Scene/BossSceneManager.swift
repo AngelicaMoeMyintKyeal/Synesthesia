@@ -1,15 +1,20 @@
 //
-//  SceneManager.swift
+//  BossSceneManager.swift
 //  Gamemotion
 //
-//  Created by Pierpaolo Siciliano on 23/02/23.
+//  Created by Htet Myat Moe Myint Kyeal on 28/02/23.
 //
 
 import SpriteKit
 
-class SceneManager: SKScene, SKPhysicsContactDelegate {
+class BossSceneManager: SKScene, SKPhysicsContactDelegate {
     
     var entityManager: EntityManager!
+//    var videoSceneManager: VideoSceneManager!
+//
+//    override func sceneDidLoad() {
+//        videoSceneManager.languageForVideo(deviceLang: Locale.current.languageCode ?? "en")
+//    }
     
     override func didMove(to view: SKView) {
         entityManager = EntityManager(scene: self)
